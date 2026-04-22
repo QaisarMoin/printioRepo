@@ -5,6 +5,13 @@ import { getCategories, getProducts } from '../api';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import book from "../assets/book.jpeg";
+import quality from "../assets/quality.png";
+import deliverservice from "../assets/deliverservice.jpg";
+import customedesign from "../assets/customedesign.jpg";
+import blackcard from "../assets/blackcard.avif";
+import bestprice from "../assets/bestprice.jpg";
+
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -68,10 +75,10 @@ export default function Home() {
           <div className="flex-1 relative hidden lg:block">
             <div className="relative w-full aspect-square flex items-center justify-center">
               <div className="absolute top-0 right-0 w-64 h-64 animate-bounce duration-[3s]">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCscqYllNCet9UIBFwCA7NU3pA0tnBfA4EyQ&s" className="w-full h-full object-contain rounded-3xl shadow-2xl -rotate-12 border-4 border-white" alt="Floating Note" />
+                <img src={book} className="w-full h-full object-contain rounded-3xl shadow-2xl -rotate-12 border-4 border-white" alt="Floating Note" />
               </div>
               <div className="absolute bottom-0 left-0 w-56 h-56 animate-bounce duration-[4s] delay-700">
-                <img src="https://img.freepik.com/free-vector/luxury-black-golden-business-card-design_1017-36825.jpg?semt=ais_hybrid&w=740&q=80" className="w-full h-full object-contain rounded-3xl shadow-2xl rotate-12 border-4 border-white" alt="Floating Pen" />
+                <img src={blackcard} className="w-full h-full object-contain rounded-3xl shadow-2xl rotate-12 border-4 border-white" alt="Floating Pen" />
               </div>
             </div>
           </div>
@@ -164,7 +171,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-stitch-primary/5 rounded-[2.5rem] blur-2xl transition-all duration-700 group-hover:bg-stitch-primary/10" />
                 <img 
-                  src="https://5.imimg.com/data5/SELLER/Default/2023/9/340258448/ML/BK/TG/183776122/14.jpg" 
+                  src={deliverservice}
                   alt="Express Delivery" 
                   className="relative w-full rounded-[2rem] shadow-2xl shadow-stitch-primary/10 transition-all duration-700 group-hover:scale-[1.02] border border-gray-100"
                 />
@@ -191,7 +198,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-stitch-primary/5 rounded-[2.5rem] blur-2xl transition-all duration-700 group-hover:bg-stitch-primary/10" />
                 <img 
-                  src="https://st5.depositphotos.com/1010735/63322/v/450/depositphotos_633229116-stock-illustration-custom-design-sign-colorful-brush.jpg" 
+                  src={customedesign}
                   alt="Custom Design Studio" 
                   className="relative w-full rounded-[2rem] shadow-2xl shadow-stitch-primary/10 transition-all duration-700 group-hover:scale-[1.02] border border-gray-100"
                 />
@@ -216,7 +223,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-stitch-primary/5 rounded-[2.5rem] blur-2xl transition-all duration-700 group-hover:bg-stitch-primary/10" />
                 <img 
-                  src="https://png.pngtree.com/png-clipart/20240206/original/pngtree-wax-stamp-quality-assured-parchment-photo-png-image_14243945.png" 
+                  src={quality} 
                   alt="Quality Inspection" 
                   className="relative w-full rounded-[2rem] shadow-2xl shadow-stitch-primary/10 transition-all duration-700 group-hover:scale-[1.02] border border-gray-100"
                 />
@@ -248,7 +255,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-stitch-primary/5 rounded-[2.5rem] blur-2xl transition-all duration-700 group-hover:bg-stitch-primary/10" />
                 <img 
-                  src="https://static.vecteezy.com/system/resources/previews/013/413/157/non_2x/best-price-banner-megaphone-icon-modern-style-design-on-white-background-vector.jpg" 
+                  src={bestprice} 
                   alt="Premium Value" 
                   className="relative w-full rounded-[2rem] shadow-2xl shadow-stitch-primary/10 transition-all duration-700 group-hover:scale-[1.02] border border-gray-100"
                 />
