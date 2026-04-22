@@ -225,10 +225,8 @@ export default function Navbar() {
 
           {/* User Controls */}
           <div className="flex items-center gap-6 flex-shrink-0">
-            <div className="hidden lg:flex flex-col text-right">
-              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Need Help?</span>
-              <span className="text-sm font-bold text-gray-700">Call: 1800-PRINT</span>
-            </div>
+           
+
             
             <div className="hidden md:flex items-center gap-4 border-x border-gray-100 px-6">
               {user ? (

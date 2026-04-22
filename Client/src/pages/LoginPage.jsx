@@ -36,7 +36,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center bg-white px-4">
+    <div className="min-h-[85vh] flex items-center justify-center bg-white px-4 pt-10">
       <div className="max-w-md w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-900 rounded-2xl shadow-xl mb-6">

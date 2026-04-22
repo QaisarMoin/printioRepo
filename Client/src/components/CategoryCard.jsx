@@ -58,35 +58,37 @@ export default function CategoryCard({ category }) {
   return (
     <Link
       to={`/category/${encodeURIComponent(name)}`}
-      className="card group flex flex-col bg-white hover:-translate-y-1 transition-all duration-300"
+      className="group flex flex-col items-center text-center gap-4 transition-all duration-300 transform hover:scale-105"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
-        <img
-          src={displayImage}
-          alt={name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+      <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 group">
+        {/* Outer concentric border */}
+        <div className="absolute inset-0 rounded-full border-2 border-stitch-primary/10 group-hover:border-stitch-primary/20 transition-all duration-300 scale-110" />
+        {/* Inner concentric border */}
+        <div className="absolute inset-0 rounded-full border-2 border-stitch-primary group-hover:scale-105 transition-all duration-300" />
+        
+        {/* Image Container */}
+        <div className="absolute inset-1.5 rounded-full overflow-hidden bg-white shadow-inner">
+          <img
+            src={displayImage}
+            alt={name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+        </div>
+
         {name === 'Business Cards' && (
-          <span className="absolute top-3 left-3 bg-stitch-neutral/80 text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full backdrop-blur-sm">
-            Best Seller
-          </span>
+          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-black uppercase tracking-widest px-2 py-1 rounded-full shadow-lg z-10 animate-bounce">
+            Hot
+          </div>
         )}
       </div>
-      <div className="p-6 flex flex-col flex-1">
-        <h3 className="text-lg font-black text-stitch-neutral mb-1 tracking-tight group-hover:text-stitch-primary transition-colors">
+      
+      <div className="space-y-1">
+        <h3 className="text-sm sm:text-base font-bold text-stitch-neutral group-hover:text-stitch-primary transition-colors tracking-tight">
           {name}
         </h3>
-        <p className="text-sm text-stitch-neutral/40 font-medium leading-snug mb-4 line-clamp-2">
-          {data.description}
+        <p className="text-[10px] sm:text-[11px] font-black text-stitch-primary uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+          Shop Now
         </p>
-        <div className="mt-auto flex items-center justify-between group/link">
-          <p className="text-[11px] font-black text-stitch-primary uppercase tracking-widest">
-            From ₹{data.price}
-          </p>
-          <svg className="w-5 h-5 text-stitch-neutral/20 group-hover/link:translate-x-1 group-hover/link:text-stitch-primary transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </div>
       </div>
     </Link>
   );
