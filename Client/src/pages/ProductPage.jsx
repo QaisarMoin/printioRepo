@@ -65,11 +65,7 @@ export default function ProductPage() {
 
         {/* Details */}
         <div className="flex flex-col gap-6 py-2">
-          {product.customizable && (
-            <span className="inline-flex items-center gap-2 text-[10px] font-bold text-stitch-primary bg-stitch-primary/10 px-4 py-1.5 rounded-full w-fit uppercase tracking-widest">
-              ✏️ Customizable
-            </span>
-          )}
+        
           <h1 className="text-4xl font-black text-stitch-neutral tracking-tight leading-none">{product.name}</h1>
           <p className="text-sm font-bold text-stitch-neutral/40 uppercase tracking-widest">{product.category}</p>
           <p className="text-stitch-neutral/60 text-base leading-relaxed max-w-md">{product.description}</p>
