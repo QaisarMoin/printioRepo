@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stitch-primary: #0040df;
+  --color-stitch-secondary: #FF7A00;
+  --color-stitch-tertiary: #FFD600;
+  --color-stitch-bg: #f9f9fc;
+  --color-stitch-neutral: #1A1C1E;
+
+  --font-sans: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+
+  --shadow-stitch: 0 4px 24px rgba(45, 91, 255, 0.08);
+  --shadow-stitch-hover: 0 8px 32px rgba(45, 91, 255, 0.12);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-stitch-bg text-stitch-neutral font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-stitch-primary hover:bg-[#0035bd] text-white font-bold px-6 py-3 rounded-lg transition-all duration-200 shadow-stitch hover:shadow-stitch-hover active:scale-95;
+  }
+  .btn-outline {
+    @apply border-2 border-stitch-primary text-stitch-primary hover:bg-stitch-primary hover:text-white font-bold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-stitch border border-gray-100 overflow-hidden hover:shadow-stitch-hover transition-all duration-300;
+  }
+  .input-field {
+    @apply w-full bg-[#f4f7ff] border border-gray-100 rounded-lg px-6 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-[#0040df]/10 focus:border-stitch-primary transition-all font-medium;
+  }
+}
